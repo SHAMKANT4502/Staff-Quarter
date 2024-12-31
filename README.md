@@ -1,4 +1,4 @@
-# Dormitory-Management-System
+# Staff Quarter-Management-System
 
 ## ABSTRACT
 
