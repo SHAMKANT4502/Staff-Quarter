@@ -46,8 +46,6 @@ Maintenance (M_ID, Issue, Resolution_Status, Assigned_Date, Resolved_Date, Q_ID)
 ### Hall Page
 <img src="Design/Halls.png">
 
-### Admin Home Page
-<img src="Design/adminHome.png">
 
 # Conclusion <br>
 The Staff Quarter Management System simplifies and automates the management of staff quarters in organizations. By centralizing processes such as staff registration, quarter assignment, and request handling, it reduces administrative workload and ensures better transparency and communication.<br><br>
