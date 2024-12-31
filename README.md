@@ -1,68 +1,44 @@
-# Dormitory-Management-System
+# Staff Quarter-Management-System
 
-## ABSTRACT
+# ABSTRACT
+This report describes the development of a Staff Quarter Management System website aimed at improving the efficiency and effectiveness of managing staff quarters. The system addresses challenges such as managing staff information, assigning quarters, tracking occupancy, and processing maintenance requests and billing details. The proposed solution offers features like user registration, login, quarter assignment, and automated record-keeping, making management more streamlined.<br><br>
 
-This report describes the development of a dormitory management system website designed to improve the efficiency and effectiveness of managing dormitories or student housing. The website addresses the specific challenges faced by dormitory management, such as managing room assignments, maintaining accurate occupancy records, and processing billing and payment information. The proposed system provides user registration and login, room assignment management, and payment processing functionality. The website was implemented using a combination of programming languages and frameworks, and rigorous testing and validation processes were performed to ensure its reliability and effectiveness. The results of the project showed that the website provided significant benefits to both students and administrators, such as reducing paperwork, increasing transparency, and improving communication. The report concludes with potential areas for future development and improvement, such as integrating with other campus management systems or adding new
-features to the website. Overall, the dormitory management system website has the potential to revolutionize the management of dormitories and student housing, and provide significant benefits to both students and administrators.
+The website was built using PHP and MySQL and underwent rigorous testing to ensure its reliability and usability. Results showed significant benefits for both staff and administrators, including reduced paperwork, better transparency, and smoother communication. The report concludes with recommendations for future enhancements, such as integrating additional functionalities like automated notifications or scalability for larger organizations. Overall, the Staff Quarter Management System has the potential to transform quarter allocation and management, benefiting both staff and administrators alike.
 
-## Objectives
+# Objectives
+<br>The objectives of the “Staff Quarter Management System” are:<br>
 
-The objectives of the “Dormitory Management System” are:
-<ul>
-  <li>To provide a digital management system for JU hall.</li>
-  <li>To develop a user-friendly and intuitive website for dormitory management that can be accessed and utilized by both students and administrators.</li>
-  <li>To improve the efficiency of managing dormitories by providing automated tools for managing room assignments, occupancy records, and billing and payment processing.</li>
-  <li>Reduce paperwork and administrative burden by providing a digital platform for managing dormitories.</li>
-  <li>To provide accurate and up-to-date information on dormitory occupancy, room assignments, and billing and payment information.</li>
-  <li>To ensure the security and confidentiality of student and administrator data by implementing robust security measures.</li>
-  <li>To provide a reliable and scalable system that can accommodate future growth and expansion.</li>
-  <li>To improve the overall student experience by providing a streamlined and efficient process for managing dormitories.</li>
-</ul> 
+To provide a digital management system for efficiently handling staff quarters at institutions.<br>
+To develop a user-friendly, intuitive website accessible to both staff and administrators.<br>
+To automate processes like quarter allocation, occupancy tracking, and request management.<br>
+To reduce paperwork and administrative burden with a centralized, digital platform.<br>
+To ensure accurate and up-to-date records of staff information and quarter assignments.<br>
+To implement robust security measures to protect user data and maintain confidentiality.<br>
+To offer scalability and reliability, accommodating future growth and updates.<br>
+To improve staff experience by streamlining the quarter allocation process and ensuring timely maintenance.<br>
 
 
-## Requirement Collection and Analysis
+# Requirement Collection and Analysis
+<br>The key modules in the system include:<br>
 
-These are some modules present in the website.
-<ul>
-  <li>Administrator module</li>
-  <li>User Module</li>
-  <li>Hostile Module</li>
-  <li>Registration Module</li>
-</ul> 
-
-## Database Schema
-
-Admin (A_ID, Password) <br>
-Provost (P_ID, Name, Email, Phone) <br>
-Staff (St_ID, Name, Phone, Email, Post, Salary, Address) <br>
-Student (S_ID, Name, Phone, Email, Registration, Batch, Department) <br>
-Room (R_ID, Block, Floor, No of Bed, S_ID) <br>
-Dinning (D_ID, Meal Type, Meal Rate, Menu, S_ID, St_ID) <br>
-Hall Charge (H_ID, Charge, A_ID, S_ID) <br>
-Facility (F_ID, PR_ID, ER_ID, RR_ID, S_ID) <br>
-Prayer Room (S_ID, PR_ID) <br>
-Entertainment Room (ER_ID, S_ID, TV, Table Tennis) <br>
-Reading Room (RR_ID, S_ID) <br>
-
-## Diagram of Entity Relationship
-
-<img src="https://github.com/shakiliitju/Dormitory-Management-System/blob/master/ER%20Diagram/ER%20Diagram.drawio.png">
+Administrator Module: Manages staff records, approves requests, assigns quarters, and monitors overall system activities.<br>
+Staff Module: Allows staff members to log in, view their assigned quarters, and submit requests.<br>
+Request Management Module: Handles requests related to quarter assignments, maintenance, and approvals.<br>
+Notification Module: Sends notifications to staff regarding request approvals or updates.<br>
 
 
-## Design
+# Database Schema <br>
+Admin (A_ID, Password)<br>
+Staff (St_ID, Name, Phone, Email, Designation, Salary, Quarter_Assigned, Password)<br>
+Quarter (Q_ID, Location, Type, Occupancy_Status, St_ID)<br>
+Request (R_ID, Request_Type, Description, Status, St_ID, Admin_ID)<br>
+Notification (N_ID, Message, Date, St_ID)<br>
+Maintenance (M_ID, Issue, Resolution_Status, Assigned_Date, Resolved_Date, Q_ID)<br>
 
-### Home Page
-<img src="https://github.com/shakiliitju/Dormitory-Management-System/blob/master/Design/home%20page.png">
+# Conclusion <br>
+The Staff Quarter Management System simplifies and automates the management of staff quarters in organizations. By centralizing processes such as staff registration, quarter assignment, and request handling, it reduces administrative workload and ensures better transparency and communication.<br><br>
 
-### About Page
-<img src="https://github.com/shakiliitju/Dormitory-Management-System/blob/master/Design/about.png">
+Through automation, the system enhances the efficiency of quarter allocation and maintenance tracking, allowing administrators to focus on strategic tasks and improving staff satisfaction. Additionally, the system offers valuable insights into occupancy and request patterns, supporting data-driven decisions for resource optimization.<br><br>
 
-### Hall Page
-<img src="https://github.com/shakiliitju/Dormitory-Management-System/blob/master/Design/hall.png">
+The project demonstrates significant potential for future growth, such as integrating additional modules, enhancing scalability, or linking with existing institutional systems. Overall, the Staff Quarter Management System modernizes housing management practices, benefiting both administrators and staff.<br><br>
 
-### Admin Home Page
-<img src="https://github.com/shakiliitju/Dormitory-Management-System/blob/master/Design/admin%20home.png">
-
-## Conclusion
-
-Dormitory management systems are software tools that streamline the management of dormitories and student housing facilities. These systems typically include features such as room assignment and scheduling, facility maintenance and repairs, rent payment tracking, and communication tools for residents and staff. Overall, dormitory management systems can greatly benefit both students and staff by increasing efficiency and reducing administrative workload. By automating many of the tasks associated with managing a dormitory, staff members can devote more time to providing support and resources to students. Additionally, these systems often provide valuable data and analytics that can inform decision-making around facility management and student programming. For example, usage patterns and feedback from residents can help staff optimize resource allocation and improve the overall living experience for students. In summary, dormitory management systems offer a variety of benefits for both students and staff, including improved efficiency, better communication, and data-driven decisionmaking. As such, they are increasingly becoming a standard tool for managing student housing facilities.
